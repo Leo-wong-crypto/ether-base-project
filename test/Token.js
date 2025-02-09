@@ -1,13 +1,13 @@
-// const { expect } = require('chai');
-// const { ethers, upgrades } = require('hardhat');
-// const { signERC2612Permit, signERC3009TWA, signForward} = require('../utils/signer');
+const { expect } = require('chai');
+const { ethers, upgrades } = require('hardhat');
+const { signERC2612Permit, signERC3009TWA, signForward} = require('../utils/signer');
 
-// const OWNER = "0x0000000000000000000000000000000000000000000000000000000000000000";
-// const ADMIN = ethers.keccak256(ethers.toUtf8Bytes('ADMIN'));
-// const MASTER_MINTER = ethers.keccak256(ethers.toUtf8Bytes('MASTER_MINTER'));
-// const MINTER = ethers.keccak256(ethers.toUtf8Bytes('MINTER_ROLE'));
-// const CONTROLLER = ethers.keccak256(ethers.toUtf8Bytes('CONTROLLER'));
-// const FEE_RATIO = 10000n;
+const OWNER = "0x0000000000000000000000000000000000000000000000000000000000000000";
+const ADMIN = ethers.keccak256(ethers.toUtf8Bytes('ADMIN'));
+const MASTER_MINTER = ethers.keccak256(ethers.toUtf8Bytes('MASTER_MINTER'));
+const MINTER = ethers.keccak256(ethers.toUtf8Bytes('MINTER_ROLE'));
+const CONTROLLER = ethers.keccak256(ethers.toUtf8Bytes('CONTROLLER'));
+const FEE_RATIO = 10000n;
 
 
 describe('EURFToken', function () {
@@ -39,33 +39,33 @@ describe('EURFToken', function () {
     let interface;
     console.log('here is test point 1');
 
-    // beforeEach(async function () {
-    //     [
-    //         owner,
-    //         newOwner,
-    //         admin,
-    //         newAdmin,
-    //         masterMinter,
-    //         newMasterMinter,
-    //         minter,
-    //         controler1,
-    //         controler2,
-    //         feesFaucet,
-    //         bob,
-    //         alice,
-    //         malory,
-    //         forwardOperator
-    //     ] = await ethers.getSigners();
+    beforeEach(async function () {
+        [
+            owner,
+            newOwner,
+            admin,
+            newAdmin,
+            masterMinter,
+            newMasterMinter,
+            minter,
+            controler1,
+            controler2,
+            feesFaucet,
+            bob,
+            alice,
+            malory,
+            forwardOperator
+        ] = await ethers.getSigners();
 
-    //     provider = await ethers.provider;
+        provider = await ethers.provider;
     
-    //     const EURFToken = await ethers.getContractFactory('EURFToken');
-    //     interface = EURFToken.interface;
+        const EURFToken = await ethers.getContractFactory('EURFToken');
+        interface = EURFToken.interface;
 
-    //     eurftoken = await upgrades.deployProxy(EURFToken, [], { kind: 'uups', initializer: 'initialize'});
+        eurftoken = await upgrades.deployProxy(EURFToken, [], { kind: 'uups', initializer: 'initialize'});
 
-    //     await eurftoken.connect(owner).setAdministrator(admin.address);
-    // });
+        await eurftoken.connect(owner).setAdministrator(admin.address);
+    });
 
     // describe('DEPLOYMENT', function () {
     //     it('should have a name', async function () {
