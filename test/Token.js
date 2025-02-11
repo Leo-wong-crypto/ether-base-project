@@ -63,7 +63,7 @@ describe('EURFToken', function () {
         interface = EURFToken.interface;
 
         eurftoken = await upgrades.deployProxy(EURFToken, [], { kind: 'uups', initializer: 'initialize'});
-        console.log("check point");
+        console.log("check P");
 
         await eurftoken.connect(owner).setAdministrator(admin.address);
     });
