@@ -70,7 +70,7 @@ describe('EURFToken', function () {
 
     describe('DEPLOYMENT', function () {
         it('should have a name', async function () {
-            console.log("Here is test point 3");
+            console.log("Here is test point 2");
             expect(await eurftoken.name()).to.equal('EURF');
         });
     
@@ -80,7 +80,7 @@ describe('EURFToken', function () {
     });
 
     describe('ROLES', function () {
-        console.log("Here is test point 4");
+        console.log("Here is test point 3");
         describe('OWNER', function () {
             it('sets new Owner', async function () {
                 expect(await eurftoken.hasRole(OWNER, owner)).to.be.true;
