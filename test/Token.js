@@ -80,6 +80,7 @@ describe('EURFToken', function () {
     });
 
     describe('ROLES', function () {
+        console.log("Here is test point 4");
         describe('OWNER', function () {
             it('sets new Owner', async function () {
                 expect(await eurftoken.hasRole(OWNER, owner)).to.be.true;
