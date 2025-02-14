@@ -79,7 +79,7 @@ describe('EURFToken', function () {
         });
     });
 
-    describe('ROLES', function () {
+    describe('ROLES', function () { 
         console.log("Here is test point 3");
         describe('OWNER', function () {
             it('sets new Owner', async function () {
