@@ -77,7 +77,7 @@ describe('EURFToken', function () {
         it('should have a symbol', async function () {
             expect(await eurftoken.symbol()).to.equal('EURF');
         });
-    }); 
+    });   
 
     describe('ROLES', function () {   
         console.log("Here is test point 3");
