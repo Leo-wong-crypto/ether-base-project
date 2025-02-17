@@ -126,7 +126,7 @@ describe('EURFToken', function () {
 
             it('allows upgrade', async function () {
 
-            }); 
+            });
 
             it('should revert if the owner is not the caller', async function () {
                 await expect(eurftoken.connect(bob).setOwner(newOwner.address)).to.be.reverted;
